@@ -405,7 +405,7 @@ ufw_conf_managed:
     - mode: 0644
     - template: jinja
     - defaults:
-        LOGLEVEL: {{ pillar["ufw"].get("loglevel", "'off'") }}
+        LOGLEVEL: '{{ pillar["ufw"].get("loglevel", "off") }}'
 
   # Reload ufw on any file change
 ufw_reload:
